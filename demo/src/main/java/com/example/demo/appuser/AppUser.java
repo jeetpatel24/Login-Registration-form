@@ -76,7 +76,7 @@ public class AppUser implements UserDetails {
     }
 
     @Override
-    public boolean isAccountNonLocked() { return false; }
+    public boolean isAccountNonLocked() { return !locked; }
 
     @Override
     public boolean isCredentialsNonExpired() {
@@ -84,5 +84,5 @@ public class AppUser implements UserDetails {
     }
 
     @Override
-    public boolean isEnabled() { return false; }
+    public boolean isEnabled() { return enabled; }
 }
